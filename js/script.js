@@ -1,7 +1,17 @@
 "use strict";
-// вправа 1
-// const names = ['Kasia', 'Tomek', 'Amanda', 'Maja'];
 
+// // вправа 1
+// const names = ['Kasia', 'Tomek', 'Amanda', 'Maja'];
+// let namesWomen = [];
+//     for (let name in names) {
+//         // console.log('name', names[name].slice(-1));
+//         if (names[name].slice(-1) == 'a') {
+//             // console.log('name', names[name]);
+//             namesWomen.push(names[name]);
+//         } 
+//     };
+// console.log('namesWomen', namesWomen);
+    
 
 // // вправа 2
 // // employeesNames список співробітників (тільки імена!). employeesSalaries повинна бути списком зарплат.
@@ -128,6 +138,129 @@
 //   console.log(sum, highestSalary, lowestSalary);
 
 
-// задача 5
-const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
+// // // задача 5
+// const tags = ['news', 'code', 'news', 'sport', 'hot', 'news', 'code'];
 
+// const tagsOrign = [];
+// let tagResult = {};
+// for (let tag in tags) {
+//     // console.log('tag', tags[tag]);
+//     if (tags[tag] in tagResult){
+//         tagResult[tags[tag]]['appearances'] += 1;
+//     } else {
+//         tagResult[tags[tag]] = {appearances: 1};
+//     } 
+// }
+// console.log('tagResult', tagResult);
+
+
+
+
+// // функції Завдання 4
+// // Напишіть функцію filterEmployees, яка прийматиме два аргументи:
+// // масив з об'єктами зі структурою {name: 'Firstname and Surname, salary: salary-amount}
+// // мінімальне значення діапазону,
+// // максимальне значення діапазону.
+
+// function filterEmployees(arr, min, max) {
+//     const filteredArray = [];
+  
+//     for(const empl of employees) {
+//       if(empl.salary > min && empl.salary < max) {
+//         filteredArray.push(empl);
+//       }
+//     }
+  
+//     return filteredArray;
+//   }
+// const employees = [
+//     { name: 'Amanda Doe', salary: 3000 },
+//     { name: 'John Doe', salary: 4000 },
+//     { name: 'Claire Downson', salary: 2000 },
+//     { name: 'Freddie Clarkson', salary: 6000 },
+//     { name: 'Thomas Delaney', salary: 8200 }
+//   ];
+//   const filteredEmployees = filterEmployees(employees, 2000, 8000);
+//   console.log(filteredEmployees);
+
+
+// // Вправа 5
+// // Напишіть функцію, яка приймає один аргумент (будь-який об’єкт), а потім
+// //  відображає інформацію про всі властивості цього об’єкту в консолі.
+// const obj = {
+//     firstName: 'John',
+//     lastName: 'Doe'
+//   }
+  
+//   function showObjectParams(obj) {
+//     for(const paramId in obj) {
+//       const param = obj[paramId];
+//       console.log(paramId + ': ' + param);
+//     }
+//   }
+//   showObjectParams(obj);
+
+
+
+// // Вправа 6
+// // Напишіть функцію forEach, яка прийматиме два аргументи:
+// // будь-який масив,
+// // будь-яку функцію зворотного виклику.
+
+// const arr = ['John', 'Amanda', 'Thomas'];
+
+// function forEach(arr, cb) {
+//     for(let elem of arr){
+//         cb(elem);
+//     }
+// }
+// forEach(arr, function(item) { console.log(item); });
+
+
+
+// // вправа 7
+// // функція яка прийматиме ім’я та прізвище 
+// // в аргументі та повертатиме виправлений вигляд.
+// function formatName(name){
+//     const firstNameAndLastName = name.split(' ');
+//     let firstName = firstNameAndLastName[0];
+//     let lastName = firstNameAndLastName[1];
+
+//     firstName = firstName.charAt(0).toUpperCase() + firstName.substr(1).toLowerCase()
+//     lastName = lastName.charAt(0).toUpperCase() + lastName.substr(1).toLowerCase()
+//     return firstName + ' ' + lastName;
+// }
+// console.log(formatName('aMANDa DOE'));
+// console.log(formatName('AMANDA DOE'));
+// console.log(formatName('john DOE'));
+
+
+
+// // вправа 8
+// // Завдання функції — пройти через усі числа в межах заданого 
+// // діапазону та повернути масив, який міститиме лише парні числа.
+
+// function getEvensInRange(start, end) {
+//     const evensArray = [];
+  
+//     for(let i = start; i <= end; i++) {
+//       if(i%2 === 0) evensArray.push(i);
+//     }
+  
+//     return evensArray;
+//   }
+//   console.log(getEvensInRange(0, 9)); // повертає [0, 2, 4, 6, 8]
+//   console.log(getEvensInRange(7, 12)); // повертає [8, 10, 12]
+
+// // вправа 9 
+// // відфільтрувати все що ділеться на 2
+// function filter(arr, cb) {
+//     const filteredArray = [];
+  
+//     for(const elem of arr) {
+//       if(cb(elem)) filteredArray.push(elem);
+//     }
+  
+//     return filteredArray;
+//   }
+//   console.log(filter([10, 6, 7], function(item) { return item%2 === 0 }));
