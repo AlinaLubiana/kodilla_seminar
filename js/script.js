@@ -32,7 +32,7 @@
 
 // всплывающее окно с вопросом (с кнопками ок и отмена, ответ мы можем посмотреть в консоле)
 // const result = confirm('Are you here?');
-// console.log(result); // answer true
+// console.log(result); // answer true если мы отвечаем ок
 
 // // ответ от пользователя , ответ попадает в консоль
 // const answer = +prompt("Do uoy have 18 years old?", "18"); // + может поменять строку на тип данных намбер
@@ -75,8 +75,8 @@
 // let incr = 10, 
 //     decr = 10;
 
-// incr++; // oператор инкремента (можно ++incr;)
-// decr--;  // Оператор декримента
+// incr++; // oператор инкремента (можно ++incr;) увеличение на 1
+// decr--;  // Оператор декримента, уменьшение на 1
 
 // console.log(incr); //(можно console.log(++incr) без добавления 77строки;)
 // console.log(decr);
@@ -1460,3 +1460,24 @@
 //     return filteredArray;
 //   }
 //   console.log(filter([10, 6, 7], function(item) { return item%2 === 0 }));
+
+
+
+
+
+
+// // переменные и строгий режим
+// let numder = 5; 
+// const leftBorderWidth = 1;
+
+// numder = 10;
+// // leftBorderWidth = 2; //'leftBorderWidth' which is a constant.
+// console.log(numder);  // 10
+
+// const obj = {
+//     a: 50
+// };
+// obj.a = 10;
+// console.log(obj); // { a: 10 }
+
+
