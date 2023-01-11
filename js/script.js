@@ -121,52 +121,6 @@
 
 
 
-// логические Операторы
-// оператор (И) &&
-// const humburger = true;
-// const fries = true;
-
-// if (humburger && fries) {
-//     console.log('Я сыт');
-// }
-// console.log((humburger && fries));
-
-
-// const humburger = 3;
-// const fries = 1;
-// const cola = 0;
-// if (humburger === 3 && cola && fries === 1) {
-//     console.log('Все сыты');
-// } else {
-//     console.log('мы уходим');
-// }
-
-
-// const humburger = 3;
-// const fries = 1;
-// const cola = 0;
-// console.log(humburger === 3 && cola && fries === 1);
-
-
-// оператор или
-// const humburger = 3;
-// const fries = 0;
-// const cola = 0;
-// if (humburger || cola || fries) {
-//     console.log('Все сыты');
-// } else {
-//     console.log('мы уходим');
-// }
-
-// let hamburger;
-// const fries = NaN;
-// const cola = 0;
-// const nuggets = 2;
- 
-// if (hamburger && cola || fries === 3 && nuggets) {
-//    console.log('Done!')
-// }
-
 // циклы
 // let num = 50;
 
@@ -1481,3 +1435,229 @@
 // console.log(obj); // { a: 10 }
 
 
+
+
+
+/* ***********************урок19***************
+// Задание на урок:
+
+// 1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+// 'Сколько фильмов вы уже посмотрели?'
+
+// 2) Создать объект personalMovieDB и в него поместить такие свойства:
+//     - count - сюда передается ответ на первый вопрос
+//     - movies - в это свойство поместить пустой объект
+//     - actors - тоже поместить пустой объект
+//     - genres - сюда поместить пустой массив
+//     - privat - в это свойство поместить boolean(логическое) значение false
+
+// 3) Задайте пользователю по два раза вопросы:
+//     - 'Один из последних просмотренных фильмов?'
+//     - 'На сколько оцените его?'
+// Ответы стоит поместить в отдельные переменные
+// Записать ответы в объект movies в формате: 
+//     movies: {
+//         'logan': '8.1'
+//     }
+
+// Проверить, чтобы все работало без ошибок в консоли */
+
+// const numberOfFilms =  +prompt('Сколько фильмов вы уже посмотрели?', ''); //1 создали переменную
+
+// // 2 создаем обьект 
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+
+// // 3 задаем вопросы
+// const a = prompt('Один из последних просмотренных фильмов?', ''),
+//       b = prompt('На сколько оцените его?', ''),
+//       c = prompt('Один из последних просмотренных фильмов?', ''),
+//       d = prompt('На сколько оцените его?', '');
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+// console.log(personalMovieDB);
+
+
+
+
+
+/* ***********************урок20**************** условия */
+
+// if(4 == 9){
+//     console.log('Ok');
+// } else {
+//     console.log('Error');
+// }
+
+
+// const num = 50;
+
+// if (num < 49) {
+//     console.log('Error');
+// } else if (num > 100) {
+//     console.log('A lot');
+// } else {
+//     console.log('ok');
+// }
+
+// // синтаксис условий при помощи тернарного оператора
+// const num2 = 50;
+// (num2 === 50) ? console.log('ok') : console.log('Error');
+
+
+// // cокращаем if else с помощью switch (проверяет только на строгое соответствие!!)
+// const num3 = 50;
+// switch (num3) {
+//     case 49:
+//         console.log('no!');
+//         break;
+//     case 100:
+//         console.log('no!');
+//         break;
+//     case 50:
+//         console.log('ok!');
+//         break;  
+//     default: 
+//         console.log('not this time');
+//         break;  
+// }
+
+
+
+
+
+
+/* ***********************урок21. (д) Логические операторы****************  */
+
+// оператор (И) &&
+// const humburger = true;
+// const fries = true;
+
+// if (humburger && fries) {
+//     console.log('Я сыт');
+// }
+// console.log((humburger && fries));
+
+
+// const humburger = 3;
+// const fries = 1;
+// const cola = 0;
+// if (humburger === 3 && cola && fries === 1) {
+//     console.log('Все сыты');
+// } else {
+//     console.log('мы уходим');
+// }
+
+
+// const humburger = 3;
+// const fries = 1;
+// const cola = 0;
+// console.log(humburger === 3 && cola && fries === 1);
+
+
+// оператор или
+// const humburger = 3;
+// const fries = 0;
+// const cola = 0;
+// if (humburger || cola || fries) {
+//     console.log('Все сыты');
+// } else {
+//     console.log('мы уходим');
+// }
+
+
+// let johnReport, alexReport, samReport, mariaReport = 'done';
+// console.log(johnReport || alexReport || samReport || mariaReport);
+
+
+// homework 21
+// console.log( NaN || 2 || undefined ); //2
+// console.log( NaN && 2 && undefined ); //NaN
+// console.log( 1 && 2 && 3 ); //3
+// console.log( !1 && 2 || !3 ); //false
+// console.log( 25 || null && !3 ); //25
+// console.log( NaN || null || !3 || undefined || 5); //5
+// console.log( NaN || null && !3 && undefined || 5); //5
+// console.log( 5 === 5 && 3 > 1 || 5); //true
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 2;
+ 
+// if (hamburger === 3 && cola || fries === 3 && nuggets) {
+//    console.log('Done!') //Done!
+// }
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+ 
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// }
+
+
+// let hamburger;
+// const fries = NaN;
+// const cola = 0;
+// const nuggets = 2;
+ 
+// if (hamburger && cola || fries === 3 && nuggets) {
+//    console.log('Done!')
+// }
+
+/* **********************22.Цикл***************  */
+// // Цикл while
+// let num = 50;
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// // Цикл do
+// let num = 50;
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while(num < 55);
+
+// // Цикл for
+// let num = 50;
+
+// for (let i = 1; i < 8; i++) {
+//     // console.log(i);
+//     console.log(num);
+//     num++;
+// } // в консоле будет 50 51 52 53 54 55 56 (повторятся цикл будет 7 раз (т.к і меньше 8))
+
+
+// continue; break;
+
+// let num = 50;
+
+// for (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         break;
+//     }
+//     console.log(i);
+// } // в консоле 1-5
+
+// let num = 50;
+
+// for (let i = 1; i < 10; i++) {
+//     if (i === 6) {
+//         continue;
+//     }
+//     console.log(i);
+// } // в консоле 1-5 7-9 (6 пропускаем)
